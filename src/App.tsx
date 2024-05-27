@@ -14,7 +14,7 @@ const App: React.FC<Props> = () => {
       return;
     }
     toast.promise(
-      fetch("https://leetcode-potd-email-service.vercel.app/send", {
+      fetch("https://leetcode-potd-email-service.vercel.app/add", {
         method: "POST",
         body: JSON.stringify({ email, authToken:import.meta.env.VITE_AUTH_TOKEN }),
         headers: { "Content-Type": "application/json" },
