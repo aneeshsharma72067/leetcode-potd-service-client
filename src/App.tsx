@@ -9,7 +9,6 @@ type Props = {};
 const App: React.FC<Props> = () => {
   const [email, setEmail] = useState<string>("");
   const subscribe = async () => {
-    console.log(import.meta.env.VITE_AUTH_TOKEN)
     if (!email || !validate(email)) {
       toast.error("Invalid Email");
       return;
